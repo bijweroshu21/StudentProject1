@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>WELCOME TO  REGISTER PAGE</h3>
+<form th:action="@{/students/update}" method="POST" th:object="${student}">
+<pre>
+<input type="hidden" th:field="*{id}" readonly="readonly"/>
+Student Name : <input type="text" th:field="*{name}" readonly="readonly"/>
+Student DOB : <input type="date" th:field="*{dob}" readonly="readonly"/>
+Student DOJ: <input type="date" th:field="*{doj}" readonly="readonly"/>
+
+<input type="submit" value="Update Student Data">
+</pre>
+</form>
+</body>
+</html>
